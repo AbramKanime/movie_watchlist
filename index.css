@@ -1,0 +1,385 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 360px;
+    max-width: 480px;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: #121212;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6));
+    margin-bottom: 20px;
+}
+
+#header::before {
+    content: '';
+    background: url('img/movie-poster.jpg'), lightgray 0px -158.291px / 100% 423.007% no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+#title  {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto 0;
+}
+
+#form {
+    width: 300px;
+    display: flex;
+    margin: auto auto -20px;
+}
+
+#input-txt {
+    width: 70%;
+    border-radius: 6px 0px 0px 6px;
+    background: #9CA3AF;
+    color: #2E2E2F;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+button {
+    cursor: pointer;
+}
+
+#input-btn {
+    width: 30%;
+    border-radius: 0px 6px 6px 0px;
+    background: #4B4B4B;
+    color: #FFF;
+}
+
+#input-txt, #input-btn {
+    padding: 9px 13px;
+    border: none;
+}
+
+.main-body, .temp-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#main-body {
+    flex-direction: column;
+}
+
+.temp-container {
+    height: 570px;
+}
+
+.body-placeholder, .error-msg {
+    margin: auto;
+    color: #2E2E2F;
+    text-align: center;
+}
+
+.body-placeholder p {
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: 700; 
+}
+
+#body-placeholder-watchlist-p {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #fff;
+    margin: 0;
+}
+
+#body-placeholder-watchlist-p a {
+    width: 14px;
+    height: 14px;
+    margin: 0;
+    color: #fff;
+    text-decoration: none;
+}
+
+#title h1 {
+    font-size: 1.87rem;
+    font-weight: 800;
+    letter-spacing: -1.926px;
+}
+
+#title p a {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: inherit;
+}
+
+#title p a:hover,
+#body-placeholder-watchlist-p a:hover {
+    text-decoration: underline;
+    color: yellow;
+}
+
+.btn:hover {
+    color: yellow;
+}
+
+.movie-parent-container {
+    border-bottom: 1px solid #2C2C2C;
+    margin: 0 auto;
+}
+
+.movie-container {
+    color: #FFFFFF;
+    height: 180px;
+    display: flex;
+    gap: 10px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.section-2 {
+    color: white;
+}
+
+.movie-container .movie-poster {
+    width: 80px;
+}
+
+.detail-container, .detail-container span {
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+}
+
+.detail-container {
+    padding-right: 20px;
+    gap: 10px;
+    justify-content: space-between;
+    font-size: 10px;
+}
+
+.movie-details {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    width: 120px;
+}
+
+.movie-sub-container h3 {
+    margin-bottom: 0;
+    width: 250px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 15px;
+}
+
+.plot {
+    width: 250px;
+    padding-right: 5px;
+}
+
+.movie-plot {
+    font-size: 11px;
+    color: #A5A5A5;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.btn {
+    display: flex;
+    border: none;
+    background: none;
+    color: #fff;
+    gap: 2px;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+i {
+    width: 16px;
+    height: 16px;
+}
+
+.loading {
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    margin-bottom: 1em;
+    color: #2E2E2F
+}
+
+/* Media quaery */
+@media (min-width: 481px) {
+    body {
+        max-width: 600px;
+    }
+    #title h1 {
+        font-size: 2.812rem;
+    }
+    
+    .movie-sub-container h3 {
+        width: 330px;
+        font-size: 1.125rem;
+    }
+
+    #title p a {
+        font-size: 0.87rem;
+    }
+    
+    #form, .movie-parent-container {
+        width: 450px;
+    }
+    
+    .movie-container .movie-poster {
+        width: 100px;
+    }
+    .detail-container, .detail-container span {
+        font-size: 0.75rem;
+    }
+    
+    .movie-details {
+        width: 100%;
+    }
+    
+    .movie-plot {
+        font-size: 0.70rem;
+    }
+    
+    .plot {
+        width: 320px
+    }
+}
+
+@media (min-width: 601px) {
+    body {
+        max-width: 780px;
+    }
+    
+    #title  {
+        justify-content: space-between;
+        margin-left: 1.25em;
+        margin-right: 1.25em;
+    }
+    
+    #title h1 {
+        font-size: 2.912rem;
+    }
+
+    #title p a {
+        font-size: 1rem;
+    }
+    
+    #form, .movie-parent-container {
+        width: 550px;
+    }
+    
+    .movie-container .movie-poster {
+        width: 200px;
+    }
+    
+    .movie-plot {
+        font-size: 0.875rem;
+    }
+    
+    .plot {
+        width: 400px;
+    }
+    
+    .movie-sub-container h3 {
+        width: 400px;
+        font-size: 1.325rem;
+    }
+}
+
+@media (min-width: 781px) {
+    body {
+        max-width: 100%;
+    }
+    
+    .header {
+        height: 350px;
+    }
+    
+    #title  {
+        justify-content: space-between;
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+    
+    #title h1 {
+        font-size: 5rem;
+    }
+
+    #title p a {
+        font-size: 1.5rem;
+    }
+    
+    #form {
+        width: 700px;
+    }
+    
+    .movie-parent-container {
+        width: 350px;
+        /* margin-left: 5px; */
+    }
+    
+    .movie-sub-container h3 {
+        width: 230px;
+        font-size: 16px;
+    }
+
+    #title p a {
+        font-size: 0.87rem;
+    }
+    
+    .movie-container .movie-poster {
+        width: 100px;
+    }
+    .detail-container, .detail-container span {
+        font-size: 11px;
+    }
+    
+    .movie-plot {
+        font-size: 10px;
+    }
+    
+    .plot {
+        width: 232px;
+    }
+    
+    #main-body {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .temp-container {
+        align-self: center;
+        margin: auto;
+    }
+}
