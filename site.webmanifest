@@ -1,0 +1,11 @@
+{
+    "name": "MovieList App",
+    "short_name": "MovieList",
+    "icons":
+        [
+            {"src":"img/movie-icon-15139.png","sizes":"192x192","type":"image/png"},{"src":"/img/movie-icon-15139.png","sizes":"512x512","type":"image/png"}
+        ],
+    "theme_color": "#808080",
+    "background_color": "##808080",
+    "display": "standalone"
+}
