@@ -25,6 +25,7 @@ document.addEventListener('click', (e) => {
         } else {
             localStorageWatchlist.push(movieID)
             localStorage.setItem("watchlistArray", JSON.stringify(localStorageWatchlist))
+            document.querySelector(`[data-add=${movieID}`).style.color = 'yellow'
         }
     }
     else if (e.target.dataset.remove){
