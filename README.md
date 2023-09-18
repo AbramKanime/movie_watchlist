@@ -1,21 +1,19 @@
-# cofae4719b052b12535f61eac
+# Movie Watchlist
 
-Quick start:
+This web app was built using JS, HTML, and CSS
 
 ```
 $ npm install
 $ npm start
 ````
 
-Head over to https://vitejs.dev/ to learn more about using vite
-## About Scrimba
+## About Movie Watchlist
 
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Frontend Developer Career Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
+Movie Watchlist is used to search for movies in the IMDB database by a way of fetching the data from an API call. A keyword can be typed in the search field, and the app returns a list of movies with the keyword contained in them. The user can then save the movies he/she would like to watch. The saved movies are stored in the local storage of the user.
 
-- [Our courses](https://scrimba.com/allcourses)
-- [The Frontend Career Path](https://scrimba.com/learn/frontend)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
+The app is also designed to handle errors that may be encountered in the calls to API, and the web layout is very responsive to different screen sizes.
 
-Happy Coding!
+You are welcome to leave notes for optimizations for me!
+
+## Author
+### Abraham Onyeka Kanime
