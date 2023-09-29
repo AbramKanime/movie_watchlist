@@ -174,7 +174,9 @@ function renderErrorMsg() {
     mainBodyEl.innerHTML = `
         <div class="temp-container">
             <div class="error-msg">
-                Unable to find what you’re looking for. Please try another search.
+                Unable to find what you’re looking for!!
+                <br></br>
+                Please try another search.
             </div>
         </div>
     `
