@@ -40,7 +40,9 @@ document.addEventListener('click', (e) => {
 })
 
 function searchMovie(searchValue) {
-    if(searchValue) {
+    if (!searchValue) {
+        renderSearchPageCover()
+    } else {
         fetch(`${url}&s=${searchValue}`)
         .then(res => res.json())
         .then(data => {
@@ -60,8 +62,6 @@ function searchMovie(searchValue) {
         .catch(err => {
             renderErrorMsg()
         })
-    } else {
-        renderSearchPageCover()
     }
 }
 
@@ -104,7 +104,9 @@ async function getMoviesHtml() {
 }
 
 async function getWatchlist() {
-    if (localStorageWatchlist.length > 0){
+    if (localStorageWatchlist.length < 1) {
+        renderWatchlistPageCover()
+    } else {
         showLoading()
         mainBodyEl.innerHTML = ''
         for (let movieID of localStorageWatchlist) {
@@ -137,8 +139,6 @@ async function getWatchlist() {
             `
             mainBodyEl.innerHTML += movieHtml
         }
-    } else {
-        renderWatchlistPageCover()
     }
 }
 
